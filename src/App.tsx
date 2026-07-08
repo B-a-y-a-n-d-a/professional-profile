@@ -59,8 +59,8 @@ export default function App() {
   const [terminalHistory, setTerminalHistory] = useState<TerminalLine[]>([
     { type: 'input', text: 'contact --init' },
     { type: 'system', text: '[SYSTEM] Initializing communication protocols...' },
-    { type: 'info', text: '[INFO] Title resolved: Junior Software Engineer' },
-    { type: 'system', text: '[SYSTEM] 3 endpoints discovered.' }
+    { type: 'info', text: '[INFO] Title resolved: Integration Engineer // Junior Software Engineer' },
+    { type: 'system', text: '[SYSTEM] 3 endpoints discovered. OData API layer: ACTIVE.' }
   ]);
   const [terminalInput, setTerminalInput] = useState('');
   const terminalBottomRef = useRef<HTMLDivElement>(null);
@@ -134,27 +134,28 @@ export default function App() {
       case 'about':
         newHistory.push(
           { type: 'info', text: '> PROFILE RESOLVED // BAYANDA MLOMO' },
-          { type: 'system', text: 'Junior Software Engineer specialized in designing distributed microservice nodes and back-end integration protocols. Employs logic-first hierarchy, sharp structural standards, and asynchronous message streams to resolve low-latency operations.' }
+          { type: 'system', text: 'Junior Software Engineer / Integration Engineer with experience designing middleware and backend solutions connecting enterprise systems to consumer-facing platforms. Expertise in RESTful and OData APIs, Node.js, Express.js, and Redis.' }
         );
         break;
 
       case 'contact':
         newHistory.push(
           { type: 'info', text: 'Active communication channels verified:' },
-          { type: 'success', text: '  EMAIL:     hello@bayandamlomo.com' },
-          { type: 'success', text: '  LINKEDIN:  linkedin.com/in/bayandamlomo' },
-          { type: 'success', text: '  GITHUB:    github.com/bayandamlomo' }
+          { type: 'success', text: '  EMAIL:     bayandamlomo1@gmail.com' },
+          { type: 'success', text: '  LINKEDIN:  linkedin.com/in/bayanda-mlomo-74a781312' },
+          { type: 'success', text: '  GITHUB:    github.com/B-a-y-a-n-d-a' }
         );
         break;
 
       case 'skills':
         newHistory.push(
           { type: 'info', text: 'RETRIEVING COMPETENCY VECTORS:' },
-          { type: 'system', text: '  NodeJS/TypeScript ─── [■■■■■■■■■■] 100% (Core Stack)' },
-          { type: 'system', text: '  PostgreSQL/SQL ─── [■■■■■■■■□□] 80%  (Schema Architecture)' },
-          { type: 'system', text: '  Redis Caching ──── [■■■■■■■■□□] 80%  (Low-Latency Buffer)' },
-          { type: 'system', text: '  Apache Kafka ───── [■■■■■■■□□□] 70%  (Message Brokerage)' },
-          { type: 'system', text: '  Docker/K8s ─────── [■■■■■■■□□□] 70%  (Workload Deployment)' }
+          { type: 'system', text: '  NodeJS/TypeScript ─── [■■■■■■■■■□] 90% (Core Stack)' },
+          { type: 'system', text: '  RESTful & OData APIs─ [■■■■■■■■□□] 80%  (Integration Protocols)' },
+          { type: 'system', text: '  Java / Spring ──── [■■■■■■■□□□] 70%  (Backend Frameworks)' },
+          { type: 'system', text: '  Redis Caching ──── [■■■■■■■□□□] 70%  (Low-Latency Buffer)' },
+          { type: 'system', text: '  PostgreSQL/SQL ─── [■■■■■■■□□□] 70%  (Schema Architecture)' },
+          { type: 'system', text: '  Docker / Azure ─── [■■■■■□□□□□] 60%  (Containers & Cloud)' }
         );
         break;
 
@@ -344,11 +345,11 @@ export default function App() {
                 
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase leading-none">
                   Bayanda Mlomo <br/>
-                  <span className="text-text-secondary font-mono text-xl md:text-2xl block mt-2">// Junior Software Engineer</span>
+                  <span className="text-text-secondary font-mono text-xl md:text-2xl block mt-2">// Software Engineer</span>
                 </h1>
                 
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed max-w-xl font-mono">
-                  Designing resilient distributed systems and Node.js architectures. Focus on structural integrity, logic-first hierarchy, and robust backend integrations.
+                  Building middleware integration layers and RESTful/OData API pipelines that connect enterprise backend systems to consumer-facing platforms. Focus on resilient async flows, Redis caching, and secure token-based authentication.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-4">
@@ -458,7 +459,7 @@ export default function App() {
               <div className="border border-border-muted bg-surface-card p-6 flex flex-col gap-2 hover:border-logic-blue hover:shadow-[0_0_15px_rgba(0,123,255,0.15)] transition-all duration-300 relative group">
                 <span className="absolute top-4 right-4 text-border-muted font-mono text-3xl group-hover:text-logic-blue/30 transition-colors">01</span>
                 <Cpu className="text-logic-blue w-6 h-6 mb-2" />
-                <span className="font-mono text-3xl font-medium text-white tracking-tight">2+ Years</span>
+                <span className="font-mono text-3xl font-medium text-white tracking-tight">1+ Years</span>
                 <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">Production Experience</span>
               </div>
               {/* Metric Card 2 */}
@@ -472,8 +473,8 @@ export default function App() {
               <div className="border border-border-muted bg-surface-card p-6 flex flex-col gap-2 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all duration-300 relative group">
                 <span className="absolute top-4 right-4 text-border-muted font-mono text-3xl group-hover:text-purple-500/30 transition-colors">03</span>
                 <Layers className="text-purple-400 w-6 h-6 mb-2" />
-                <span className="font-mono text-3xl font-medium text-white tracking-tight">Certified GenAI</span>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">Open Source Contributor</span>
+                <span className="font-mono text-3xl font-medium text-white tracking-tight">5 Certifications</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">AEM · Azure · AI · Selenium</span>
               </div>
 
               {/* Core Dependencies full width banner */}
@@ -491,7 +492,7 @@ export default function App() {
                     { name: 'TypeScript', icon: 'TS', colorClass: 'hover:border-logic-blue hover:text-logic-blue' },
                     { name: 'Redis Caching', icon: 'DB', colorClass: 'hover:border-red-500 hover:text-red-500' },
                     { name: 'PostgreSQL', icon: 'SQL', colorClass: 'hover:border-cyan-400 hover:text-cyan-400' },
-                    { name: 'Apache Kafka', icon: 'MSG', colorClass: 'hover:border-yellow-500 hover:text-yellow-500' }
+                    { name: 'Java / Spring', icon: 'JAVA', colorClass: 'hover:border-orange-500 hover:text-orange-500' }
                   ].map((dep, index) => (
                     <div 
                       key={index} 
@@ -692,7 +693,7 @@ export default function App() {
                         </div>
 
                         <div className="font-mono text-[10px] text-text-secondary leading-normal leading-relaxed border-t border-border-muted pt-4 bg-[#111] p-3 border">
-                          <span className="text-system-green font-bold">[TRACE_STATUS]:</span> Verified architecture nodes and deployment vectors. Caching and resilience algorithms positive. Click another trace item on the timeline to map its microservice topology.
+                          <span className="text-system-green font-bold">[TRACE_STATUS]:</span> Verified integration node architecture and deployed API vectors. Redis caching and token auth layers positive. Click another trace item on the timeline to map its integration topology.
                         </div>
                       </div>
                     );
@@ -818,7 +819,7 @@ export default function App() {
                       <label className="font-mono text-[10px] text-text-secondary uppercase">Core Log Message:</label>
                       <input
                         type="text"
-                        placeholder="e.g. Optimizing asynchronous payment queue pipeline in Kafka."
+                        placeholder="e.g. Optimizing OData API integration responses with Redis."
                         value={customLogMessage}
                         onChange={(e) => setCustomLogMessage(e.target.value)}
                         required
@@ -944,7 +945,7 @@ export default function App() {
                   <span className="w-2.5 h-2.5 bg-border-muted rounded-none"></span>
                 </div>
                 <div className="font-mono text-[10px] text-text-secondary uppercase tracking-widest font-semibold">
-                  contact.sh — bayanda@mlomo
+                  contact.sh — bayandamlomo1@gmail.com
                 </div>
                 <span className="w-10"></span>
               </div>
@@ -1026,13 +1027,13 @@ export default function App() {
       <footer className="bg-surface-base border-t border-border-muted w-full mt-auto relative z-10 shrink-0">
         <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 w-full max-w-[1200px] mx-auto gap-6 md:gap-0">
           <div className="font-mono text-[11px] text-text-secondary select-none tracking-wide text-center md:text-left">
-            © 2024 SYSTEM_ARCHITECT.BAYANDA_MLOMO // STATUS: ACTIVE // COMPILED UTC 2026
+            © 2025 INTEGRATION_ENGINEER.BAYANDA_MLOMO // STATUS: ACTIVE // COMPILED UTC 2026
           </div>
           
           <ul className="flex items-center space-x-8 font-mono text-[11px]">
             <li>
               <a 
-                href="https://github.com/bayandamlomo1" 
+                href="https://github.com/B-a-y-a-n-d-a" 
                 target="_blank" 
                 rel="noreferrer" 
                 className="text-text-secondary hover:text-system-green transition-colors uppercase tracking-widest flex items-center gap-1.5"
@@ -1043,7 +1044,9 @@ export default function App() {
             </li>
             <li>
               <a 
-                href="#" 
+                href="https://www.linkedin.com/in/bayanda-mlomo-74a781312/" 
+                target="_blank" 
+                rel="noreferrer" 
                 className="text-text-secondary hover:text-system-green transition-colors uppercase tracking-widest flex items-center gap-1.5"
               >
                 <Linkedin className="w-3.5 h-3.5 text-logic-blue" />
@@ -1052,11 +1055,11 @@ export default function App() {
             </li>
             <li>
               <a 
-                href="mailto:hello@bayandamlomo.com" 
+                href="mailto:bayandamlomo1@gmail.com" 
                 className="text-text-secondary hover:text-system-green transition-colors uppercase tracking-widest flex items-center gap-1.5"
               >
                 <Mail className="w-3.5 h-3.5 text-system-green animate-pulse" />
-                Documentation
+                Email
               </a>
             </li>
           </ul>

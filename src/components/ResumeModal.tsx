@@ -9,7 +9,7 @@ interface ResumeModalProps {
 const COMPILATION_STEPS = [
   { text: 'Initializing resume compilation pipeline...', duration: 600, status: 'BOOT' },
   { text: 'Transpiling experience nodes to vector segments...', duration: 800, status: 'TRANSPILE' },
-  { text: 'Resolving module dependencies (Node.js, Express, Kafka)...', duration: 700, status: 'RESOLVE' },
+  { text: 'Resolving module dependencies (Node.js, Express, Java)...', duration: 700, status: 'RESOLVE' },
   { text: 'Optimizing database queries and cache layer layers...', duration: 600, status: 'OPTIMIZE' },
   { text: 'Injecting security and auth protocol vectors...', duration: 500, status: 'SECURE' },
   { text: 'Finalizing build pipeline & generating schema representation...', duration: 600, status: 'COMPLETE' },
@@ -203,24 +203,24 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                       Bayanda Mlomo
                     </h1>
                     <p className="font-mono text-sm text-system-green uppercase tracking-widest mt-1">
-                      Junior Software Engineer // Integration Architect
+                      Junior Software Engineer // Integration Engineer
                     </p>
                     <p className="font-sans text-text-secondary text-xs mt-2 max-w-md">
-                      Specialized in architecting high-throughput, fault-tolerant backend integrations and distributed microservices with Node.js, Express, Kafka, and Redis.
+                      Integration Engineer with experience designing middleware and backend solutions connecting enterprise systems to consumer-facing platforms.
                     </p>
                   </div>
                   <div className="font-mono text-xs text-text-secondary flex flex-col gap-1.5 border-l border-border-muted pl-4 md:border-l-0 md:pl-0 md:items-end">
                     <span className="flex items-center gap-1.5 hover:text-system-green transition-colors">
                       <Mail className="w-3.5 h-3.5 text-system-green" />
-                      hello@bayandamlomo.com
+                      bayandamlomo1@gmail.com
                     </span>
                     <span className="flex items-center gap-1.5 hover:text-system-green transition-colors">
                       <Linkedin className="w-3.5 h-3.5 text-logic-blue" />
-                      linkedin.com/in/bayandamlomo
+                      linkedin.com/in/bayanda-mlomo-74a781312
                     </span>
                     <span className="flex items-center gap-1.5 hover:text-system-green transition-colors">
                       <Github className="w-3.5 h-3.5 text-text-secondary" />
-                      github.com/bayandamlomo
+                      github.com/B-a-y-a-n-d-a
                     </span>
                   </div>
                 </header>
@@ -231,7 +231,7 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     01. Professional Summary
                   </h2>
                   <p className="font-sans text-text-secondary leading-relaxed">
-                    Dynamic and detail-oriented Junior Software Developer with 2+ years of hands-on production experience designing, building, and maintaining robust backend systems and distributed services. Proven capability in decoupling monolithic architectures into containerized, event-driven microservices. Expert at integrating real-time messaging brokers (Kafka) and caching layer optimization algorithms (Redis) to ensure zero-data-loss workflows and sub-50ms latency.
+                    Skilled Integration Engineer with nearly 2 years of experience designing middleware and backend solutions connecting enterprise systems to consumer-facing platforms. Developed and deployed production-ready API integrations, implemented distributed caching strategies, and engineered resilient async workflows. Expertise in RESTful and OData APIs, Node.js, Express.js, and Redis, with a solid foundation in backend architecture and secure token-based authentication.
                   </p>
                 </section>
 
@@ -243,19 +243,19 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans text-text-secondary">
                     <div className="flex flex-col gap-1.5">
                       <p className="text-white font-mono text-xs font-semibold">&gt; Back-End Engineering</p>
-                      <p>Node.js, Express, TypeScript, GraphQL, Apollo Router, Microservices Architecture, Event-Driven Topology</p>
+                      <p>Node.js, Express.js, Java, Spring Framework, RESTful APIs, OData APIs, Middleware Design</p>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <p className="text-white font-mono text-xs font-semibold">&gt; Data Stores & Middleware</p>
-                      <p>PostgreSQL, Redis (Caching, Circuit Breakers), MongoDB, Kafka (Message Broker, Event Streaming)</p>
+                      <p className="text-white font-mono text-xs font-semibold">&gt; Web & Front-End</p>
+                      <p>React.js, HTML, CSS, JavaScript, Adobe Experience Manager (AEM)</p>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <p className="text-white font-mono text-xs font-semibold">&gt; Devops & Cloud Infrastructure</p>
-                      <p>Docker, Kubernetes (StatefulSet management), Terraform, CI/CD Deployment Pipelines, NGINX Load Balancing</p>
+                      <p className="text-white font-mono text-xs font-semibold">&gt; Testing & Databases</p>
+                      <p>Integration Testing, Selenium Testing, Database Management, Swagger, Postman</p>
                     </div>
                     <div className="flex flex-col gap-1.5">
-                      <p className="text-white font-mono text-xs font-semibold">&gt; Architecture Methodologies</p>
-                      <p>Domain-Driven Design (DDD), Clean Architecture, REST API Design, Circuit Breakers, Async Queue Processing</p>
+                      <p className="text-white font-mono text-xs font-semibold">&gt; DevOps & Cloud Infrastructure</p>
+                      <p>Docker, Azure Services, Version Control (Git)</p>
                     </div>
                   </div>
                 </section>
@@ -270,23 +270,43 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                   <div className="flex flex-col gap-1.5">
                     <div className="flex justify-between items-start font-mono text-xs">
                       <div>
-                        <span className="font-bold text-white text-sm">Integration Engineer</span>{' '}
-                        <span className="text-system-green">@ SUN INTERNATIONAL</span>
+                        <span className="font-bold text-white text-sm">Integration Engineer (Client: Sun International)</span>{' '}
+                        <span className="text-system-green">@ MPHOTI CONSULTING</span>
                       </div>
-                      <span className="text-text-secondary">2022 - PRESENT</span>
+                      <span className="text-text-secondary">12/2025 - PRESENT</span>
                     </div>
                     <ul className="list-none font-sans text-text-secondary pl-0 flex flex-col gap-1 mt-1">
                       <li className="flex gap-2 items-start">
                         <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
-                        <span>Architected core real-time hotel and gaming reservation systems supporting 10,000+ concurrent requests daily, ensuring 99.9% high availability and seamless data flow.</span>
+                        <span>Designed and delivered a middleware integration layer connecting an enterprise backend system to a consumer-facing platform (Phase 2 deployed May 2026).</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
-                        <span>Engineered reliable async message queues and event channels using Apache Kafka, reducing payment orchestration failures and transactional lockouts to absolute zero.</span>
+                        <span>Built RESTful API endpoints handling reservation management, booking flows, and business-rule enforcement.</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
-                        <span>Successfully decoupled legacy backend monolithic code structures into 8 modular, containerized TypeScript microservices using Docker and CI/CD pipelines.</span>
+                        <span>Integrated with a third-party OData API to surface contract, inventory, and usage data across complex query scenarios.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
+                        <span>Implemented a distributed caching layer with targeted invalidation strategies, improving response times and reducing upstream system load.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
+                        <span>Engineered resilient async workflows with parallel API calls, graceful error handling, and cache fallback mechanisms.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
+                        <span>Managed secure token-based authentication for upstream API access.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
+                        <span>Developed and tested API integrations, ensuring seamless communication between platforms and enhancing user experience.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-system-green font-mono text-xs shrink-0">&gt;</span>
+                        <span>Documented integration procedures and provided training to team members, fostering knowledge sharing and collaboration.</span>
                       </li>
                     </ul>
                   </div>
@@ -296,22 +316,34 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     <div className="flex justify-between items-start font-mono text-xs">
                       <div>
                         <span className="font-bold text-white text-sm">Junior Software Developer</span>{' '}
-                        <span className="text-logic-blue">@ HYDE PARK</span>
+                        <span className="text-logic-blue">@ MPHOTI CONSULTING (HYDE PARK)</span>
                       </div>
-                      <span className="text-text-secondary">2020 - 2022</span>
+                      <span className="text-text-secondary">08/2025 - 12/2025</span>
                     </div>
                     <ul className="list-none font-sans text-text-secondary pl-0 flex flex-col gap-1 mt-1">
                       <li className="flex gap-2 items-start">
                         <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
-                        <span>Led the structure and logic definition of secure enterprise APIs connecting 3rd-party banking tools to retail checkout software.</span>
+                        <span>Promoted to permanent role following successful internship, taking on increased responsibility as team lead within cohort.</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
-                        <span>Optimized complex PostgreSQL queries, creating clustered indexes and material views that successfully reduced core API database latency by 40%.</span>
+                        <span>Developed customized enterprise software solutions for clients across multiple industries.</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
-                        <span>Mentored 4 software interns on clean architecture schemas, test-driven development (TDD), and Git branching strategies.</span>
+                        <span>Worked with Adobe Experience Manager (AEM) and related web technologies in client-centric collaborative delivery.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
+                        <span>Collaborated with cross-functional teams to build robust, scalable systems that streamline business operations.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
+                        <span>Focused primarily on backend development across internal projects, driving technical decisions and supporting juniors.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-logic-blue font-mono text-xs shrink-0">&gt;</span>
+                        <span>Contributed to the successful launch of new software product: ServiceBillPro.</span>
                       </li>
                     </ul>
                   </div>
@@ -321,34 +353,84 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                     <div className="flex justify-between items-start font-mono text-xs">
                       <div>
                         <span className="font-bold text-white text-sm">Software Developer Intern</span>{' '}
-                        <span className="text-text-secondary">@ MPHOTI CONSULTING</span>
+                        <span className="text-text-secondary">@ MPHOTI CONSULTING (HYDE PARK)</span>
                       </div>
-                      <span className="text-text-secondary">2019 - 2020</span>
+                      <span className="text-text-secondary">08/2024 - 07/2025</span>
                     </div>
                     <ul className="list-none font-sans text-text-secondary pl-0 flex flex-col gap-1 mt-1">
                       <li className="flex gap-2 items-start">
                         <span className="text-text-secondary font-mono text-xs shrink-0">&gt;</span>
-                        <span>Assisted in building custom dashboard views using Node.js, Express, and MongoDB.</span>
+                        <span>Completed intensive developer programme covering full core technology stack, progressing from web basics to enterprise tools.</span>
                       </li>
                       <li className="flex gap-2 items-start">
                         <span className="text-text-secondary font-mono text-xs shrink-0">&gt;</span>
-                        <span>Built internal command-line tooling for automated developer environment setup, saving over 4 hours per new onboarding developer.</span>
+                        <span>Developed hands-on skills in HTML, CSS, JavaScript, React, Node.js, Express.js, and Adobe Experience Manager (AEM).</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-text-secondary font-mono text-xs shrink-0">&gt;</span>
+                        <span>Wrote and maintained APIs, handled server-side logic, and collaborated closely with the team.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-text-secondary font-mono text-xs shrink-0">&gt;</span>
+                        <span>Developed and maintained RESTful APIs using Java and Spring framework, enhancing integration efficiency.</span>
+                      </li>
+                      <li className="flex gap-2 items-start">
+                        <span className="text-text-secondary font-mono text-xs shrink-0">&gt;</span>
+                        <span>Collaborated with QA to troubleshoot and resolve software defects, improving application reliability.</span>
                       </li>
                     </ul>
                   </div>
                 </section>
 
                 {/* Section: Academic Milestones */}
+                <section className="flex flex-col gap-4">
+                  <h2 className="font-mono text-xs font-bold uppercase tracking-widest text-system-green border-b border-border-muted pb-1">
+                    04. Education
+                  </h2>
+                  <div className="flex flex-col gap-3 font-sans text-text-secondary">
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="text-white font-semibold">Diploma: Computer Science</p>
+                        <p className="text-xs">Tshwane University of Technology</p>
+                      </div>
+                      <span className="font-mono text-xs text-text-secondary">Graduated 12/2024</span>
+                    </div>
+                    <div className="flex justify-between items-start">
+                      <div>
+                        <p className="text-white font-semibold">National Senior Certificate: Science</p>
+                        <p className="text-xs">Allanridge Secondary School</p>
+                      </div>
+                      <span className="font-mono text-xs text-text-secondary">Graduated 12/2019</span>
+                    </div>
+                  </div>
+                </section>
+
+                {/* Section: Certifications */}
                 <section className="flex flex-col gap-2">
                   <h2 className="font-mono text-xs font-bold uppercase tracking-widest text-system-green border-b border-border-muted pb-1">
-                    04. Credentials & Education
+                    05. Certifications
                   </h2>
-                  <div className="flex justify-between items-start font-sans text-text-secondary">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3 font-sans text-text-secondary text-xs">
                     <div>
-                      <p className="text-white font-semibold">BSc in Computer Science & Information Systems</p>
-                      <p className="text-xs">University of South Africa (UNISA)</p>
+                      <p className="text-white font-semibold">AEM Foundations</p>
+                      <p className="text-[11px]">Adobe — Issued: Jun 2025</p>
                     </div>
-                    <span className="font-mono text-xs text-text-secondary">Graduated 2019</span>
+                    <div>
+                      <p className="text-white font-semibold">Microsoft AI Fluency</p>
+                      <p className="text-[11px]">Microsoft — Issued: Jun 2025</p>
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">Generative AI for Software Engineers</p>
+                      <p className="text-[11px]">WeThinkCode — Issued: Aug 2025</p>
+                    </div>
+                    <div>
+                      <p className="text-white font-semibold">Selenium Testing for Beginners</p>
+                      <p className="text-[11px]">EC-Council — Issued: May 2025</p>
+                    </div>
+                    <div className="md:col-span-2">
+                      <p className="text-white font-semibold">Microsoft Azure Developer Associate</p>
+                      <p className="text-[11px]">Microsoft — Expected: Jul 2026</p>
+                    </div>
                   </div>
                 </section>
 
