@@ -152,7 +152,7 @@ export default function App() {
           { type: 'info', text: 'RETRIEVING COMPETENCY VECTORS:' },
           { type: 'system', text: '  NodeJS/TypeScript ─── [■■■■■■■■■□] 90% (Core Stack)' },
           { type: 'system', text: '  RESTful & OData APIs─ [■■■■■■■■□□] 80%  (Integration Protocols)' },
-          { type: 'system', text: '  Java / Spring ──── [■■■■■■■□□□] 70%  (Backend Frameworks)' },
+          { type: 'system', text: '  Java / JEE ──── [■■■■■■■□□□] 70%  (Backend Frameworks)' },
           { type: 'system', text: '  Redis Caching ──── [■■■■■■■□□□] 70%  (Low-Latency Buffer)' },
           { type: 'system', text: '  PostgreSQL/SQL ─── [■■■■■■■□□□] 70%  (Schema Architecture)' },
           { type: 'system', text: '  Docker / Azure ─── [■■■■■□□□□□] 60%  (Containers & Cloud)' }
