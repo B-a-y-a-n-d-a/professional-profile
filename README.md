@@ -1,28 +1,20 @@
-# 🌐 Personal Portfolio – Bayanda
+<div align="center">
+<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
+</div>
 
-Welcome to my personal portfolio! This is a simple yet professional website built using **HTML**, **CSS**, and **JavaScript** to showcase my skills, projects, and career background as a Software Developer.
+# Run and deploy your AI Studio app
 
-## ✨ Features
+This contains everything you need to run your app locally.
 
-- **Responsive Design** – Mobile-first and accessible on all screen sizes.
-- **Project Showcase** – Displays a collection of my key personal and professional projects.
-- **Skills Section** – Highlights the technologies and tools I work with.
-- **Contact Form** – Users can reach out directly through a built-in contact form (or links to social profiles).
+View your app in AI Studio: https://ai.studio/apps/5911f943-697d-4ddc-a067-ac8da70b4f1b
 
-## 🛠️ Tech Stack
+## Run Locally
 
-- **Frontend:**  
-  - HTML5  
-  - CSS3  
-  - JavaScript (ES6+)
-
-- **Deployment:**  
-  - [GitHub Pages](https://pages.github.com/)
-
-## 📁 Live Preview
-
-👉 [View Portfolio Live](https://your-username.github.io/professional-profile/)
+**Prerequisites:**  Node.js
 
 
-
-Thanks for visiting my portfolio repo! Feel free to fork, star, or reach out for collaboration opportunities.
+1. Install dependencies:
+   `npm install`
+2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+3. Run the app:
+   `npm run dev`
