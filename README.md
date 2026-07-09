@@ -1,6 +1,6 @@
 # System Trace // Bayanda Mlomo
 
-An interactive, terminal-themed personal portfolio for Bayanda Mlomo — Integration Engineer / Software Engineer. Built as a single-page React app styled like a system console, with an execution-history timeline, a live telemetry log feed, and a working command-line shell.
+An interactive, terminal-themed personal portfolio for Bayanda Mlomo — Software Engineer. Built as a single-page React app styled like a system console, with an execution-history timeline, a live telemetry log feed, and a working command-line shell.
 
 **Live site:** https://b-a-y-a-n-d-a.github.io/professional-profile/
 
