@@ -349,7 +349,7 @@ export default function App() {
                 </h1>
                 
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed max-w-xl font-mono">
-                  Building middleware integration layers and RESTful/OData API pipelines that connect enterprise backend systems to consumer-facing platforms. Focus on resilient async flows, Redis caching, and secure token-based authentication.
+                  Software engineer and developer building reliable backend systems and APIs end to end — from middleware integration layers and RESTful/OData pipelines to resilient async flows, caching strategies, and secure authentication.
                 </p>
 
                 <div className="flex flex-wrap gap-4 mt-4">
