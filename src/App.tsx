@@ -1027,7 +1027,7 @@ export default function App() {
       <footer className="bg-surface-base border-t border-border-muted w-full mt-auto relative z-10 shrink-0">
         <div className="flex flex-col md:flex-row justify-between items-center px-6 md:px-16 py-8 w-full max-w-[1200px] mx-auto gap-6 md:gap-0">
           <div className="font-mono text-[11px] text-text-secondary select-none tracking-wide text-center md:text-left">
-            © 2025 INTEGRATION_ENGINEER.BAYANDA_MLOMO // STATUS: ACTIVE // COMPILED UTC 2026
+            © 2025 SOFTWARE_ENGINEER.BAYANDA_MLOMO // STATUS: ACTIVE // COMPILED UTC 2026
           </div>
           
           <ul className="flex items-center space-x-8 font-mono text-[11px]">
