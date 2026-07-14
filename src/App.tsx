@@ -26,6 +26,7 @@ import {
 import { EXPERIENCE_DATA, INITIAL_LOG_DATA, BACKUP_LOG_DATA } from './data';
 import { ExperienceNode, SystemLog, TerminalLine } from './types';
 import ResumeModal from './components/ResumeModal';
+import TypewriterText from './components/TypewriterText';
 
 export default function App() {
   const [activeTab, setActiveTab] = useState<'landing' | 'trace' | 'logs' | 'terminal'>('landing');
@@ -345,7 +346,9 @@ export default function App() {
                 
                 <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-extrabold tracking-tight uppercase leading-none">
                   Bayanda Mlomo <br/>
-                  <span className="text-text-secondary font-mono text-xl md:text-2xl block mt-2">// Software Engineer</span>
+                  <span className="text-text-secondary font-mono text-xl md:text-2xl block mt-2">
+                    // <TypewriterText words={['Software Engineer', 'Software Developer']} />
+                  </span>
                 </h1>
                 
                 <p className="text-text-secondary text-sm md:text-base leading-relaxed max-w-xl font-mono">
