@@ -1,0 +1,41 @@
+# CI workflow — runs on every push and pull request.
+# This checks that the project installs, type-checks (lint), and builds.
+name: CI
+
+# ── Triggers: when should this workflow run? ─────────────────────────────
+on:
+  push:
+    branches: ["**"] # any branch
+  pull_request:
+    branches: ["**"]
+
+# ── Jobs: a workflow is made of one or more jobs that run on a runner ────
+jobs:
+  build:
+    name: Build & Lint
+    runs-on: ubuntu-latest # GitHub-hosted Linux machine
+
+    # ── Steps: run in order on the same runner ─────────────────────────
+    steps:
+      # 1. Pull your repository code onto the runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Install Node.js (with npm dependency caching for speed)
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+
+      # 3. Install dependencies exactly as locked in package-lock.json
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. Type-check the code (your "lint" script = tsc --noEmit)
+      - name: Lint (type-check)
+        run: npm run lint
+
+      # 5. Build the production bundle
+      - name: Build
+        run: npm run build
