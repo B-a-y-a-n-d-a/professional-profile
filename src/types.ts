@@ -13,6 +13,20 @@ export interface ExperienceNode {
   architecture?: string[]; // Simple text representation of microservice topology for "View Schematics"
 }
 
+export interface ProjectNode {
+  id: string;
+  name: string;
+  tagline: string;
+  period: string;
+  status: 'LIVE' | 'IN_DEV' | 'ARCHIVED';
+  statusColor: string;
+  description: string;
+  bullets: string[];
+  stack: string[];
+  liveUrl?: string;
+  repoUrl?: string;
+}
+
 export interface SystemLog {
   id: string;
   timestamp: string;

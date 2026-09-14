@@ -1,4 +1,4 @@
-import { ExperienceNode, SystemLog } from './types';
+import { ExperienceNode, ProjectNode, SystemLog } from './types';
 
 export const EXPERIENCE_DATA: ExperienceNode[] = [
   {
@@ -78,6 +78,90 @@ export const EXPERIENCE_DATA: ExperienceNode[] = [
       'QA Team ──> Selenium Testing Runner (Defect Verification)',
       'Defect Verification ──> Git Pull / Local Environment Fixes'
     ]
+  }
+];
+
+export const PROJECTS_DATA: ProjectNode[] = [
+  {
+    id: 'cinecircle',
+    name: 'CineCircle',
+    tagline: 'Find people to watch movies with, near you.',
+    period: '2026',
+    status: 'LIVE',
+    statusColor: 'text-system-green bg-system-green/10 border-system-green',
+    description: 'A social platform for coordinating cinema watch parties — browse real showtimes from SterKinekor and Nu Metro, join or start a group, share an invite link, and debate the movie afterwards in Reel Talk.',
+    bullets: [
+      'Built an Express API (route modules for groups, movies, users, admin, screenings, posts, notifications) backed by Supabase Postgres, with all reads/writes routed through the service-role key rather than relying on exposed RLS policies.',
+      'Implemented Supabase Auth (email/password + Google OAuth) with Brevo handling transactional email for confirmation and password reset.',
+      'Wrote a custom scraper that pulls live showtimes from Ster-Kinekor and Nu Metro into the screenings table, with an admin panel for manual entry and duplicate cleanup as a fallback.',
+      'Shipped a bundler-free frontend — plain HTML/CSS pages precompiled with the Tailwind CLI, plus a shared app.js handling auth, toasts, and notifications across pages.',
+      'Deployed on Google Cloud Run pinned to a single instance, with stale-run detection built into the scraper.'
+    ],
+    stack: ['Node.js', 'Express', 'Supabase (Postgres + Auth)', 'Tailwind CSS', 'HTML/CSS/JS', 'Google Cloud Run', 'Brevo SMTP'],
+    liveUrl: 'https://cinecircle.site'
+  },
+  {
+    id: 'fuelup',
+    name: 'FuelUp',
+    tagline: 'Purpose-locked fuel credit on MoMo.',
+    period: '2026',
+    status: 'ARCHIVED',
+    statusColor: 'text-text-secondary bg-border-muted/20 border-border-muted',
+    description: 'A MoMo Mini App built for the MoMo Mini App Hackathon 2026 (Travel & Mobility track) that lets senders gift money which can only be redeemed on fuel — issued as a purpose-locked voucher and settled instantly at the pump.',
+    bullets: [
+      'Modeled the wallet mechanic on GCash and Fawry\'s earmarked-payment playbooks: a voucher ledger row with a locked_purpose of FUEL and a one-time redemption_token.',
+      'Designed three flows — Gift Fuel, Driver Wallets (weekly budgets per vehicle), and Trip Prepay — on one backend and two frontend surfaces (consumer + merchant scan).',
+      'Integrated the MoMo Collections API to buy fuel credit and the MoMo Disbursements API to settle participating fuel merchants on redemption.'
+    ],
+    stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'JWT', 'PostgreSQL', 'MoMo Collections/Disbursements API'],
+    repoUrl: 'https://github.com/B-a-y-a-n-d-a/FuelUp'
+  },
+  {
+    id: 'expense-tracker',
+    name: 'Expense Tracker & Financial Planner',
+    tagline: 'Personal expense tracker with AI-parsed bank statements.',
+    period: '2026',
+    status: 'IN_DEV',
+    statusColor: 'text-logic-blue bg-logic-blue/10 border-logic-blue',
+    description: 'A personal expense tracker and monthly financial planner developed with Spec-Driven Development — budgets, recurring expenses, and month-over-month history, with Gemini parsing uploaded bank statement PDFs into categorised transactions and AI-generated budget recommendations.',
+    bullets: [
+      'React 18 + Vite frontend with a Claude-inspired warm design system, dark mode, and an expense calendar with per-day tooltips.',
+      'Node/Express + PostgreSQL backend with JWT auth, bcrypt-hashed passwords, and colour-coded per-category budget tracking.',
+      'Gemini 3.1 Flash Lite extracts every debit from an uploaded bank statement PDF into structured JSON with no template setup required, and generates savings tips plus a recommended budget.',
+      'Containerised with Docker + docker-compose: Nginx serves the SPA and proxies /api to the backend, with Postgres migrations running automatically on first boot.'
+    ],
+    stack: ['React', 'Vite', 'Node.js', 'Express', 'PostgreSQL', 'JWT / bcrypt', 'Gemini 3.1 Flash Lite', 'Docker'],
+    repoUrl: 'https://github.com/B-a-y-a-n-d-a/Expense-Tracker'
+  },
+  {
+    id: 'error-oracle',
+    name: 'Error Oracle (Dev-Buddy)',
+    tagline: 'Paste a stack trace. Get a complete diagnosis in seconds.',
+    period: '2026',
+    status: 'ARCHIVED',
+    statusColor: 'text-text-secondary bg-border-muted/20 border-border-muted',
+    description: 'A multi-agent AI diagnostic tool built with Google ADK and Gemini for a Knowledge Sharing session after the Google Cloud Summit Johannesburg 2026 — three specialist agents pipeline a stack trace into a plain-English root cause, real fix research, and a step-by-step resolution guide.',
+    bullets: [
+      'Built a SequentialAgent pipeline in Google ADK (TypeScript): an Error Interpreter, a Fix Researcher grounded in live Google Search, and a Resolution Guide synthesiser.',
+      'Each agent runs as its own Gemini 3.1 Flash Lite call with a dedicated system prompt and tool access, passing state to the next agent via ADK session management.',
+      'Shipped with zero frontend code — the entire UI is the adk web dev console served by @google/adk-devtools.'
+    ],
+    stack: ['Google ADK (TypeScript)', 'Gemini 3.1 Flash Lite', 'Google Search Grounding', 'Node.js'],
+    repoUrl: 'https://github.com/B-a-y-a-n-d-a/Dev-buddy'
+  },
+  {
+    id: 'spazakonnect',
+    name: 'SpazaKonnect',
+    tagline: 'Turning spaza shops into connected community hubs.',
+    period: '2026',
+    status: 'IN_DEV',
+    statusColor: 'text-logic-blue bg-logic-blue/10 border-logic-blue',
+    description: 'A digital platform concept transforming township spaza shops into community hubs — a free digital storefront, a community delivery network powered by local couriers, cooperative bulk-buying groups to cut stock costs, and a hyperlocal notice board.',
+    bullets: [
+      'Backend scaffold underway in Node.js/JavaScript; frontend and full feature set not yet public.'
+    ],
+    stack: ['JavaScript', 'Node.js'],
+    repoUrl: 'https://github.com/B-a-y-a-n-d-a/SpazaKonnect'
   }
 ];
 
