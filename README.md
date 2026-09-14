@@ -45,13 +45,20 @@ npm run lint      # type-check with tsc
 
 ## Deployment
 
-This site is deployed to GitHub Pages from the `gh-pages` branch. To publish a new build:
+This site auto-deploys to GitHub Pages on every push to `master` via [.github/workflows/deploy.yml](.github/workflows/deploy.yml) — it builds with Vite and publishes `dist/` using GitHub's native Pages Actions (`actions/upload-pages-artifact` + `actions/deploy-pages`). No manual step needed; just merge to `master`.
+
+This requires the repository's **Settings → Pages** source to be set to **GitHub Actions** (not "Deploy from a branch").
+
+<details>
+<summary>Legacy manual deploy (pre-Actions, kept for reference)</summary>
 
 ```
 npm run deploy
 ```
 
-This runs `vite build` and pushes the contents of `dist/` to `gh-pages` via the [`gh-pages`](https://www.npmjs.com/package/gh-pages) package. Make sure the repository's **Settings → Pages** source is set to deploy from the `gh-pages` branch (root).
+This runs `vite build` and pushes the contents of `dist/` to the `gh-pages` branch via the [`gh-pages`](https://www.npmjs.com/package/gh-pages) package — only relevant if Pages source is reverted to "Deploy from a branch".
+
+</details>
 
 ## Project Structure
 
