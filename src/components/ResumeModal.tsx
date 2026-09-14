@@ -427,10 +427,6 @@ export default function ResumeModal({ isOpen, onClose }: ResumeModalProps) {
                       <p className="text-white font-semibold">Selenium Testing for Beginners</p>
                       <p className="text-[11px]">EC-Council — Issued: May 2025</p>
                     </div>
-                    <div className="md:col-span-2">
-                      <p className="text-white font-semibold">Microsoft Azure Developer Associate</p>
-                      <p className="text-[11px]">Microsoft — Expected: Jul 2026</p>
-                    </div>
                   </div>
                 </section>
 

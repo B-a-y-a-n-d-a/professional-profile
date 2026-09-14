@@ -8,8 +8,9 @@ An interactive, terminal-themed personal portfolio. Built as a single-page React
 
 - **Landing** — hero profile summary, quick metrics, and a snippet of recent activity.
 - **System Trace** — an experience timeline where each role expands into an ASCII-style architecture schematic of the systems built there.
+- **Projects** — a registry of deployed and in-progress side projects (e.g. [CineCircle](https://cinecircle.site)), each with a status badge, description, tech stack, and links to the live site and/or source repo.
 - **Logs** — a filterable/searchable feed of "telemetry" entries describing projects and milestones, with the ability to inject custom log entries and load archived history.
-- **Terminal** — a working command shell (`help`, `about`, `contact`, `skills`, `logs`, `trace`, `resume`, `clear`) for navigating the site and pulling up contact info.
+- **Terminal** — a working command shell (`help`, `about`, `contact`, `skills`, `logs`, `trace`, `projects`, `resume`, `clear`) for navigating the site and pulling up contact info.
 - **Execute_Resume** — a modal that simulates a build/compile pipeline before revealing a printable resume view.
 
 ## Tech Stack
@@ -58,7 +59,7 @@ This runs `vite build` and pushes the contents of `dist/` to `gh-pages` via the 
 src/
   App.tsx                     # Main app: nav, all four views, terminal command logic
   components/ResumeModal.tsx  # Interactive resume compile/print modal
-  data.ts                     # Experience timeline and log feed content
+  data.ts                     # Experience timeline, project registry, and log feed content
   types.ts                    # Shared TypeScript types
 ```
 

@@ -19,17 +19,19 @@ import {
   AlertCircle, 
   Plus, 
   Download, 
-  Menu, 
+  Menu,
   X,
-  ChevronRight
+  ChevronRight,
+  Boxes,
+  GitBranch
 } from 'lucide-react';
-import { EXPERIENCE_DATA, INITIAL_LOG_DATA, BACKUP_LOG_DATA } from './data';
+import { EXPERIENCE_DATA, PROJECTS_DATA, INITIAL_LOG_DATA, BACKUP_LOG_DATA } from './data';
 import { ExperienceNode, SystemLog, TerminalLine } from './types';
 import ResumeModal from './components/ResumeModal';
 import TypewriterText from './components/TypewriterText';
 
 export default function App() {
-  const [activeTab, setActiveTab] = useState<'landing' | 'trace' | 'logs' | 'terminal'>('landing');
+  const [activeTab, setActiveTab] = useState<'landing' | 'trace' | 'projects' | 'logs' | 'terminal'>('landing');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
@@ -128,6 +130,7 @@ export default function App() {
           { type: 'success', text: '  logs              Displays system telemetry metrics and state.' },
           { type: 'success', text: '  clear             Wipes the command history buffer.' },
           { type: 'success', text: '  trace             Switches view to the System Trace (Execution History).' },
+          { type: 'success', text: '  projects          Switches view to the Project Registry (Deployed Systems).' },
           { type: 'success', text: '  resume            Executes high-tech interactive resume compilation script.' }
         );
         break;
@@ -177,6 +180,11 @@ export default function App() {
       case 'trace':
         newHistory.push({ type: 'system', text: '[SYSTEM] Redirecting viewport to System Trace...' });
         setTimeout(() => setActiveTab('trace'), 400);
+        break;
+
+      case 'projects':
+        newHistory.push({ type: 'system', text: '[SYSTEM] Redirecting viewport to Project Registry...' });
+        setTimeout(() => setActiveTab('projects'), 400);
         break;
 
       case 'resume':
@@ -231,10 +239,11 @@ export default function App() {
 
           {/* Nav Links (Desktop) */}
           <ul className="hidden md:flex items-center space-x-10">
-            {['landing', 'trace', 'logs', 'terminal'].map((tab) => {
+            {['landing', 'trace', 'projects', 'logs', 'terminal'].map((tab) => {
               const tabLabels: Record<string, string> = {
                 landing: 'Landing',
                 trace: 'System Trace',
+                projects: 'Projects',
                 logs: 'Logs',
                 terminal: 'Terminal'
               };
@@ -281,10 +290,11 @@ export default function App() {
       {isMobileMenuOpen && (
         <div className="fixed inset-0 top-[57px] bg-black/95 z-40 flex flex-col p-6 animate-in fade-in duration-200">
           <ul className="flex flex-col space-y-6 mt-8 font-mono text-sm uppercase">
-            {['landing', 'trace', 'logs', 'terminal'].map((tab) => {
+            {['landing', 'trace', 'projects', 'logs', 'terminal'].map((tab) => {
               const tabLabels: Record<string, string> = {
                 landing: 'Landing',
                 trace: 'System Trace',
+                projects: 'Projects',
                 logs: 'Logs',
                 terminal: 'Terminal'
               };
@@ -363,12 +373,19 @@ export default function App() {
                     <TerminalIcon className="w-4 h-4" />
                     Initialize_Connection
                   </button>
-                  <button 
+                  <button
                     onClick={() => setActiveTab('trace')}
                     className="border border-border-muted text-text-secondary hover:text-system-green hover:border-system-green px-6 py-3 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2 rounded-none cursor-pointer"
                   >
                     <Network className="w-4 h-4" />
                     View_Schematics
+                  </button>
+                  <button
+                    onClick={() => setActiveTab('projects')}
+                    className="border border-border-muted text-text-secondary hover:text-system-green hover:border-system-green px-6 py-3 font-mono text-xs uppercase tracking-wider transition-all flex items-center gap-2 rounded-none cursor-pointer"
+                  >
+                    <Boxes className="w-4 h-4" />
+                    View_Projects
                   </button>
                 </div>
               </div>
@@ -476,8 +493,8 @@ export default function App() {
               <div className="border border-border-muted bg-surface-card p-6 flex flex-col gap-2 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all duration-300 relative group">
                 <span className="absolute top-4 right-4 text-border-muted font-mono text-3xl group-hover:text-purple-500/30 transition-colors">03</span>
                 <Layers className="text-purple-400 w-6 h-6 mb-2" />
-                <span className="font-mono text-3xl font-medium text-white tracking-tight">5 Certifications</span>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">AEM · Azure · AI · Selenium</span>
+                <span className="font-mono text-3xl font-medium text-white tracking-tight">4 Certifications</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">AEM · AI · Selenium</span>
               </div>
 
               {/* Core Dependencies full width banner */}
@@ -710,7 +727,108 @@ export default function App() {
         )}
 
         {/* ────────────────────────────────────────────────────────────────────────
-            VIEW 3: LOGS (SYSTEM LOGS)
+            VIEW 3: PROJECTS (DEPLOYED SYSTEMS / PROJECT REGISTRY)
+            ──────────────────────────────────────────────────────────────────────── */}
+        {activeTab === 'projects' && (
+          <div className="w-full max-w-[1200px] mx-auto px-6 md:px-16 py-8 md:py-16 flex flex-col gap-12 animate-in fade-in slide-in-from-bottom-4 duration-300">
+
+            <header className="border-l-2 border-system-green pl-6 flex flex-col gap-2">
+              <h1 className="text-white text-3xl md:text-5xl font-extrabold tracking-tight uppercase leading-none">
+                Project_Registry_
+              </h1>
+              <p className="font-mono text-xs text-text-secondary">
+                <span className="text-system-green font-bold">&gt;</span> Enumerating deployed and in-progress systems built outside of client engagements.
+              </p>
+            </header>
+
+            {/* Project cards grid */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              {PROJECTS_DATA.map((project) => (
+                <div
+                  key={project.id}
+                  className="border border-border-muted bg-surface-card p-6 md:p-8 flex flex-col gap-5 hover:border-logic-blue transition-all duration-300 relative group"
+                >
+                  {/* Header row: title + status */}
+                  <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4">
+                    <div>
+                      <h3 className="font-bold text-lg md:text-xl text-text-primary tracking-tight group-hover:text-system-green transition-colors">
+                        {project.name}
+                      </h3>
+                      <p className="font-mono text-xs text-text-secondary mt-1">
+                        {project.tagline}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-start md:items-end gap-1.5 shrink-0">
+                      <span className={`font-mono text-[9px] font-bold border px-2.5 py-0.5 tracking-wider uppercase rounded-none ${project.statusColor}`}>
+                        STATUS: {project.status.replace('_', ' ')}
+                      </span>
+                      <span className="font-mono text-xs text-text-secondary">{project.period}</span>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="font-mono text-xs text-text-secondary leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Key bullets */}
+                  <div className="font-mono text-xs text-text-secondary space-y-2.5 leading-relaxed">
+                    {project.bullets.map((bullet, index) => (
+                      <p key={index} className="flex gap-2.5 items-start">
+                        <span className="text-system-green shrink-0">&gt;</span>
+                        <span>{bullet}</span>
+                      </p>
+                    ))}
+                  </div>
+
+                  {/* Tech stack chips */}
+                  <div className="flex flex-wrap gap-2.5 pt-4 border-t border-border-muted">
+                    {project.stack.map((tech, index) => (
+                      <span
+                        key={index}
+                        className="border border-border-muted text-logic-blue px-2.5 py-1 font-mono text-[10px] font-bold bg-surface-base hover:border-logic-blue transition-colors rounded-none"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links row */}
+                  {(project.liveUrl || project.repoUrl) && (
+                    <div className="flex flex-wrap gap-3 pt-2">
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="border border-system-green text-system-green px-4 py-2 font-mono text-[10px] uppercase font-bold tracking-widest hover:bg-system-green hover:text-surface-base transition-all rounded-none cursor-pointer flex items-center gap-2"
+                        >
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          Visit_Live
+                        </a>
+                      )}
+                      {project.repoUrl && (
+                        <a
+                          href={project.repoUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="border border-border-muted text-text-secondary px-4 py-2 font-mono text-[10px] uppercase font-bold tracking-widest hover:text-white hover:border-text-secondary transition-all rounded-none cursor-pointer flex items-center gap-2"
+                        >
+                          <GitBranch className="w-3.5 h-3.5" />
+                          View_Source
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+
+          </div>
+        )}
+
+        {/* ────────────────────────────────────────────────────────────────────────
+            VIEW 4: LOGS (SYSTEM LOGS)
             ──────────────────────────────────────────────────────────────────────── */}
         {activeTab === 'logs' && (
           <div className="w-full max-w-[1200px] mx-auto px-6 md:px-16 py-8 md:py-16 flex flex-col gap-8 md:gap-12 animate-in fade-in slide-in-from-bottom-4 duration-300">
@@ -932,7 +1050,7 @@ export default function App() {
         )}
 
         {/* ────────────────────────────────────────────────────────────────────────
-            VIEW 4: TERMINAL (COMMAND SHELL)
+            VIEW 5: TERMINAL (COMMAND SHELL)
             ──────────────────────────────────────────────────────────────────────── */}
         {activeTab === 'terminal' && (
           <div className="w-full max-w-[1200px] mx-auto px-6 md:px-16 py-8 md:py-16 flex items-center justify-center animate-in fade-in slide-in-from-bottom-4 duration-300">
