@@ -493,8 +493,8 @@ export default function App() {
               <div className="border border-border-muted bg-surface-card p-6 flex flex-col gap-2 hover:border-purple-500 hover:shadow-[0_0_15px_rgba(168,85,247,0.15)] transition-all duration-300 relative group">
                 <span className="absolute top-4 right-4 text-border-muted font-mono text-3xl group-hover:text-purple-500/30 transition-colors">03</span>
                 <Layers className="text-purple-400 w-6 h-6 mb-2" />
-                <span className="font-mono text-3xl font-medium text-white tracking-tight">5 Certifications</span>
-                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">AEM · Azure · AI · Selenium</span>
+                <span className="font-mono text-3xl font-medium text-white tracking-tight">4 Certifications</span>
+                <span className="font-mono text-[11px] uppercase tracking-wider text-text-secondary">AEM · AI · Selenium</span>
               </div>
 
               {/* Core Dependencies full width banner */}
