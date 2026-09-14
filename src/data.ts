@@ -138,8 +138,8 @@ export const PROJECTS_DATA: ProjectNode[] = [
     name: 'Error Oracle (Dev-Buddy)',
     tagline: 'Paste a stack trace. Get a complete diagnosis in seconds.',
     period: '2026',
-    status: 'ARCHIVED',
-    statusColor: 'text-text-secondary bg-border-muted/20 border-border-muted',
+    status: 'LIVE',
+    statusColor: 'text-system-green bg-system-green/10 border-system-green',
     description: 'A multi-agent AI diagnostic tool built with Google ADK and Gemini for a Knowledge Sharing session after the Google Cloud Summit Johannesburg 2026 — three specialist agents pipeline a stack trace into a plain-English root cause, real fix research, and a step-by-step resolution guide.',
     bullets: [
       'Built a SequentialAgent pipeline in Google ADK (TypeScript): an Error Interpreter, a Fix Researcher grounded in live Google Search, and a Resolution Guide synthesiser.',
@@ -147,6 +147,7 @@ export const PROJECTS_DATA: ProjectNode[] = [
       'Shipped with zero frontend code — the entire UI is the adk web dev console served by @google/adk-devtools.'
     ],
     stack: ['Google ADK (TypeScript)', 'Gemini 3.1 Flash Lite', 'Google Search Grounding', 'Node.js'],
+    liveUrl: 'https://error-oracle-80153819730.africa-south1.run.app/',
     repoUrl: 'https://github.com/B-a-y-a-n-d-a/Dev-buddy'
   },
   {
