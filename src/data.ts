@@ -103,17 +103,17 @@ export const PROJECTS_DATA: ProjectNode[] = [
   {
     id: 'fuelup',
     name: 'FuelUp',
-    tagline: 'Purpose-locked fuel credit on MoMo.',
+    tagline: 'Purpose-locked fuel credit on MTN MoMo.',
     period: '2026',
     status: 'ARCHIVED',
     statusColor: 'text-text-secondary bg-border-muted/20 border-border-muted',
-    description: 'A MoMo Mini App built for the MoMo Mini App Hackathon 2026 (Travel & Mobility track) that lets senders gift money which can only be redeemed on fuel — issued as a purpose-locked voucher and settled instantly at the pump.',
+    description: 'An MTN MoMo Mini App built for the MTN MoMo Mini App Hackathon 2026 (Travel & Mobility track) that lets senders gift money which can only be redeemed on fuel — issued as a purpose-locked voucher and settled instantly at the pump.',
     bullets: [
       'Modeled the wallet mechanic on GCash and Fawry\'s earmarked-payment playbooks: a voucher ledger row with a locked_purpose of FUEL and a one-time redemption_token.',
       'Designed three flows — Gift Fuel, Driver Wallets (weekly budgets per vehicle), and Trip Prepay — on one backend and two frontend surfaces (consumer + merchant scan).',
-      'Integrated the MoMo Collections API to buy fuel credit and the MoMo Disbursements API to settle participating fuel merchants on redemption.'
+      'Integrated the MTN MoMo Collections API to buy fuel credit and the MTN MoMo Disbursements API to settle participating fuel merchants on redemption.'
     ],
-    stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'JWT', 'PostgreSQL', 'MoMo Collections/Disbursements API'],
+    stack: ['React', 'Tailwind CSS', 'Node.js', 'Express', 'JWT', 'PostgreSQL', 'MTN MoMo Collections/Disbursements API'],
     repoUrl: 'https://github.com/B-a-y-a-n-d-a/FuelUp'
   },
   {
