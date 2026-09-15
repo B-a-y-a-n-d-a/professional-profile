@@ -168,6 +168,13 @@ export const PROJECTS_DATA: ProjectNode[] = [
 
 export const INITIAL_LOG_DATA: SystemLog[] = [
   {
+    id: 'log-9',
+    timestamp: '2026.09.10',
+    category: 'AI_INTEGRATION',
+    message: 'Multi-agent orchestration in practice: when to reach for Sequential vs. Parallel vs. Loop.',
+    details: 'Google ADK builds every agent from the same primitive — an LlmAgent with its own model, instructions, and tools — then composes several of them with an orchestration pattern. SequentialAgent chains sub-agents into a fixed pipeline where each stage only sees the prior stage\'s structured output, which fits work that is strictly dependent: interpret an error, then research a fix, then write the resolution — you can\'t research a fix for an error you haven\'t identified yet. ParallelAgent instead fans independent sub-agents out concurrently and merges their results, which only pays off when the sub-tasks don\'t depend on each other. LoopAgent re-runs a sub-agent against its own output until an exit condition holds, for tasks needing iterative refinement rather than a single pass. Applied SequentialAgent + Gemini 3.1 Flash Lite to build a stack-trace diagnoser (Error Oracle) — the pattern, not the project, is the reusable part.'
+  },
+  {
     id: 'log-1',
     timestamp: '2026.05.14',
     category: 'DISTRIBUTED_SYSTEMS',
