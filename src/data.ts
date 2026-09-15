@@ -175,6 +175,13 @@ export const INITIAL_LOG_DATA: SystemLog[] = [
     details: 'Google ADK builds every agent from the same primitive — an LlmAgent with its own model, instructions, and tools — then composes several of them with an orchestration pattern. SequentialAgent chains sub-agents into a fixed pipeline where each stage only sees the prior stage\'s structured output, which fits work that is strictly dependent: interpret an error, then research a fix, then write the resolution — you can\'t research a fix for an error you haven\'t identified yet. ParallelAgent instead fans independent sub-agents out concurrently and merges their results, which only pays off when the sub-tasks don\'t depend on each other. LoopAgent re-runs a sub-agent against its own output until an exit condition holds, for tasks needing iterative refinement rather than a single pass. Applied SequentialAgent + Gemini 3.1 Flash Lite to build a stack-trace diagnoser (Error Oracle) — the pattern, not the project, is the reusable part.'
   },
   {
+    id: 'log-10',
+    timestamp: '2026.07.02',
+    category: 'CORE_LOGIC',
+    message: 'Built CineCircle\'s showtime scraper — reconciling two unrelated cinema sites into one screenings table.',
+    details: 'Ster-Kinekor and Nu Metro expose completely different markup, session identifiers, and update cadences; the scraper normalises both into a single screenings schema so the rest of the app never has to know which chain a listing came from. The harder problem wasn\'t parsing, it was concurrency: with the service pinned to a single Cloud Run instance, a slow-running scrape overlapping the next scheduled one would double-write rows, so the scraper checks for and skips stale or still-in-flight runs before starting. Scraping a site you don\'t control is inherently best-effort — when either chain\'s markup shifts silently, the admin panel\'s manual-entry and duplicate-cleanup tools are the real fallback, not a retry loop.'
+  },
+  {
     id: 'log-1',
     timestamp: '2026.05.14',
     category: 'DISTRIBUTED_SYSTEMS',
